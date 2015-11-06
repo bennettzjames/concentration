@@ -4,6 +4,11 @@ Must be included in readme:
 -sources of any code used
 
 
+might use this--http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array (to shuffle array)
+
+but this seems simpler--http://www.w3schools.com/jsref/jsref_random.asp
+
+
 -user stories
 	-USER SHOULD BE ABLE TO:
 		-See a grid of boxes(4x4 at a minimum)
@@ -22,7 +27,7 @@ Must be included in readme:
 		-(optional) it would also be cool to track the best times of the user. 
 
 -Front end wireframes
-	-will be attached as image files in the repo******
+	-***image file in the repo******
 
 -List of technologies used
 
