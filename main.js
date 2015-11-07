@@ -1,54 +1,66 @@
 console.log('link check')
 
-
-
-
-	$(document).ready(function(){
+$(document).ready(function(){
 	
-
 $wholeBoard = $('.game-board')
 
-$boxOne = $('.one')
-$boxTwo = $('.two')
-$boxThree = $('.three')
-$boxFour = $('.four')
-// $boxFive = $('.five')
-// $boxSix = $('.six')
-// $boxSeven = $('.seven')
-// $boxEight = $('.eight')
-// $boxNine = $('.nine')
-// $boxTen = $('.ten')
-// $boxEleven = $('.eleven')
-// $boxTwelve = $('.twelve')
-// $boxThirteen = $('.thirteen')
-// $boxFourteen = $('.fourteen')
-// $boxFifteen = $('.fifteen')
-// $boxSixteen = $('.sixteen')
+//to shuffle gameboard:
+
+//randomize array, then create divs
+
+//creat shuffle array with .shuffle, then loop through new array, for each time it loops creat a div for each, and append to col 1
+
+outputArray = [];
+backsideIds = [];
+var counter = 0;
 
 
-var gamePieces = ['$boxOne', '$boxTwo', '$boxThree', '$boxFour']
+//below is the Fisher-Yates shuffle. aka the knuth shuffle. I found it on stackoverflow and followed the link to the github page. I couldn't get the underscore shuffle to work right. 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  while (0 !== currentIndex) {
+
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+flippedArray = ['1', '1', '2', '2'];
+shuffle(flippedArray);
+// shuffle(boardArray);
+console.log(flippedArray);
 
 
-var randomBoard = function() {
-   for (var i=0;i<gamePieces.length;i++) {
-      $(".square").append($wholeBoard[i]);
+randomBoard = function(){
+	counter = 0;
+	var output = ' ';
+	for (var i = 0; i < flippedArray.length; i++){
+		output += $('<div>');
+	}
+
    }
-};
 
-// var randomBoard = function(){
-// 	for (i = 0; i<gamePieces.length; i++)
-// 	$wholeBoard.math.floor(math.random(i * 4) +1)
-// };
+   console.log(randomBoard);
+		//needs to create a new div each time 
+		//each div needs to get assigned a number correspoding with the counter
+		//then just append that bitch to the 'game-board'
+//}
 
 
 
-flippedArray = ['1', '2', '1', '2',];
 	
-	flippedValue = [ ]
 
 
 
-var counter = 0
+
+
 
 
 var flipCard = function(event){
