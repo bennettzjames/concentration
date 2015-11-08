@@ -1,8 +1,8 @@
-console.log('link check')
+console.log('link check');
 
 $(document).ready(function(){
 	
-$wholeBoard = $('.game-board')
+$wholeBoard = $('.game-board');
 
 //to shuffle gameboard:
 
@@ -42,12 +42,17 @@ randomBoard = function(){
 	counter = 0;
 	var output = ' ';
 	for (var i = 0; i < flippedArray.length; i++){
-		output += $('<div>');
+		output += $('<div class="square [i]">');
+		$wholeBoard.append(output);
 	}
 
-   }
+   };
 
-   console.log(randomBoard);
+ randomBoard();
+
+
+
+   
 		//needs to create a new div each time 
 		//each div needs to get assigned a number correspoding with the counter
 		//then just append that bitch to the 'game-board'
