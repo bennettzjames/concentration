@@ -42,16 +42,16 @@ randomBoard = function(event){
 	var output = ' ';
 	for (var i = 0; i < flippedArray.length; i++){
 		 console.log(i)
-		var newDiv = output += $('<div>')
-		newDiv.addClass('square');
-		newDiv.addClass('i');
+		var newDiv = output += $('<div class="square i">');
+		$wholeBoard.prepend(output);
+		
 
 
 	}
 
    };
 
-shuffle(randomBoard);
+randomBoard();
 
 
 
