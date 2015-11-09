@@ -13,7 +13,8 @@ $wholeBoard = $('.game-board');
 outputArray = [];
 backsideIds = [];
 var counter = 0;
-flippedArray = ['1', '1', '2', '2'];
+flippedArray = [
+'1', '1', '2', '2'];
 
 //below is the Fisher-Yates shuffle. aka the knuth shuffle. I found it on stackoverflow and followed the link to the github page. I couldn't get the underscore shuffle to work right. 
 shuffle = function(array) {
@@ -30,45 +31,23 @@ shuffle = function(array) {
   }
 
   return array;
+  shuffle(flippedArray);
 }
 
 
-shuffle(flippedArray);
+
 console.log(flippedArray);
 
 
-randomBoard = function(event){
+makeBoard = function(event){
 	counter = 0;
-	var output = ' ';
 	for (var i = 0; i < flippedArray.length; i++){
 		 console.log(i)
-		var newDiv = output += $('<div class="square i">');
-		$wholeBoard.prepend(output);
-		
-
-
+		 $('<div class="square '+i+'"">').appendTo($wholeBoard);
 	}
 
    };
-
-randomBoard();
-
-
-
-
-   
-		//needs to create a new div each time 
-		//each div needs to get assigned a number correspoding with the counter
-		//then just append that bitch to the 'game-board'
-//}
-
-
-
-	
-
-
-
-
+makeBoard();
 
 
 
