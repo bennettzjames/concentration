@@ -63,6 +63,9 @@ makeBoard();
 
 var flipCard = function(event){
 	var target = event.target;
+	if (classList.contains('square'){
+		
+	}
 }
 
 
