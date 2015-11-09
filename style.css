@@ -6,6 +6,7 @@ body{
 	height: 800px;
 }
 
+
 .square{
 	height: 120px;
 	width: 24%;
@@ -13,5 +14,10 @@ body{
 	border: 1px solid black;
 	background-color: green;
 	font-size: 60px;
+	text-align: center;
+}
+
+.text{
+	visibility: hidden;
 }
 

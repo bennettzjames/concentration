@@ -4,6 +4,9 @@ $(document).ready(function(){
 	
 $wholeBoard = $('.game-board');
 
+
+
+
 //to shuffle gameboard:
 
 //randomize array, then create divs
@@ -11,10 +14,10 @@ $wholeBoard = $('.game-board');
 //creat shuffle array with .shuffle, then loop through new array, for each time it loops creat a div for each, and append to col 1
 
 outputArray = [];
-backsideIds = [];
 var counter = 0;
 flippedArray = [
 '1', '1', '2', '2', '3', '3', '4', '4'];
+
 
 //below is the Fisher-Yates shuffle. aka the knuth shuffle. I found it on stackoverflow and followed the link to the github page. I couldn't get the underscore shuffle to work right. 
 shuffle = function(array) {
@@ -43,31 +46,47 @@ console.log(flippedArray);
 makeBoard = function(event){
 	counter = 0;
 	for (var i = 0; i < flippedArray.length; i++){
-		 console.log(i)
-		 $('<div class="square '+flippedArray[i]+'"">').appendTo($wholeBoard);
+		 console.log(i);
+		 $('<div class="square '+flippedArray[i]+'"">').text(flippedArray[i]).on('click', flipCard).appendTo($wholeBoard);
+
+
 	}
+
 
    };
 makeBoard();
 
 
+$allSquares = $('.square');
+
 // the above makes a div and assigns it a number from the flippedArray
 
-//now i need to make a function that adds an event listener to all of these boxes and shen they are clicked the reveal the corresponding number
+//now i need to make a function that adds an event listener to all of these boxes and then they are clicked they reveal the corresponding number
 
 //then if they match, they remain up. 
 
 //otherwise they need to flip back. 
 
-
+//before I can do this, i need to give each square a value. 
 
 var flipCard = function(event){
 	var target = event.target;
-	if (classList.contains('square'){
-		
+	if (target.text.contains('1')){
+		console.log("this works")
 	}
-}
 
+
+
+	//nothing is visibile){
+		//make visibility visible
+		//else remain invisible
+
+	};
+	
 
 
 });
+
+
+
+
