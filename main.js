@@ -5,14 +5,6 @@ $(document).ready(function(){
 $wholeBoard = $('.game-board');
 
 
-
-
-//to shuffle gameboard:
-
-//randomize array, then create divs
-
-//creat shuffle array with .shuffle, then loop through new array, for each time it loops creat a div for each, and append to col 1
-
 outputArray = [];
 var counter = 0;
 flippedArray = ['1', '1', '2', '2', '3', '3', '4', '4'];
@@ -43,56 +35,57 @@ console.log(flippedArray);
 
 
 makeBoard = function(event){
-	counter = 0;
 	for (var i = 0; i < flippedArray.length; i++){
 		 console.log(i);
-		 newDiv = $('<div class="covered square '+flippedArray[i]+'">').text(flippedArray[i]).on('click', flipCard).appendTo($wholeBoard);
+		 newDiv = $('<div class="covered square '+flippedArray[i]+'">').text(flippedArray[i]).on('click', makeMatch).appendTo($wholeBoard);
 		 console.log(newDiv);
 
 	}
 
 
    };
-var flipCard = function(event){
+// var flipCard = function(event){
+	
+// 	var $target = $(event.target);
+// 	if ($target.hasClass('covered')){
+// 		$target.removeClass('covered');
+// 		$target.addClass('square');
+// 		}
+
+// 	};
+
+
+//the makeMatch function needs to count the number of clicks and find matches
+//if clickOne's text content = clickTwo's text content, then they keep the class of square
+//if they do not match, then they need to revert to covered. 
+//maybe also setTimeout, so the user can see the second choice before the cards turn back
+var $counter = 0;
+
+var makeMatch = function(event){
+	
 	var $target = $(event.target);
-	if ($target.hasClass('covered')){
+	if ($counter <2){
 		$target.removeClass('covered');
 		$target.addClass('square');
-	
-		}
-	};
+	} else if ($target > 2) {
+		$target.addClass('covered')
+	}
+			
 
+$counter++;
+
+}
 
 makeBoard();
+makeMatch();
 
 
 
 
 $allSquares = $('.square');
 
-// the above makes a div and assigns it a number from the flippedArray
 
-//now i need to make a function that adds an event listener to all of these boxes and then they are clicked they reveal the corresponding number
-
-//then if they match, they remain up. 
-
-//otherwise they need to flip back. 
-
-//before I can do this, i need to give each square a value. 
-
-
-
-//event listener not working right
-
-	//if its covered, then uncover
-	//once uncovered, need
-		
-
-	
-	
-
-
-})
+});
 
 
 
