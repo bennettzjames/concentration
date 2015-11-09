@@ -14,7 +14,7 @@ outputArray = [];
 backsideIds = [];
 var counter = 0;
 flippedArray = [
-'1', '1', '2', '2'];
+'1', '1', '2', '2', '3', '3', '4', '4'];
 
 //below is the Fisher-Yates shuffle. aka the knuth shuffle. I found it on stackoverflow and followed the link to the github page. I couldn't get the underscore shuffle to work right. 
 shuffle = function(array) {
@@ -31,23 +31,33 @@ shuffle = function(array) {
   }
 
   return array;
-  shuffle(flippedArray);
-}
 
 
+}; 
 
+shuffle(flippedArray);
 console.log(flippedArray);
+
 
 
 makeBoard = function(event){
 	counter = 0;
 	for (var i = 0; i < flippedArray.length; i++){
 		 console.log(i)
-		 $('<div class="square '+i+'"">').appendTo($wholeBoard);
+		 $('<div class="square '+flippedArray[i]+'"">').appendTo($wholeBoard);
 	}
 
    };
 makeBoard();
+
+
+// the above makes a div and assigns it a number from the flippedArray
+
+//now i need to make a function that adds an event listener to all of these boxes and shen they are clicked the reveal the corresponding number
+
+//then if they match, they remain up. 
+
+//otherwise they need to flip back. 
 
 
 
