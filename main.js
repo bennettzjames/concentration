@@ -46,12 +46,23 @@ makeBoard = function(event){
 	counter = 0;
 	for (var i = 0; i < flippedArray.length; i++){
 		 console.log(i);
-		 newDiv = $('<div class="covered" square '+flippedArray[i]+'">').text(flippedArray[i]).on('click', flipCard).appendTo($wholeBoard);
+		 newDiv = $('<div class="covered square '+flippedArray[i]+'">').text(flippedArray[i]).on('click', flipCard).appendTo($wholeBoard);
+		 console.log(newDiv);
 
 	}
 
 
    };
+var flipCard = function(event){
+	var $target = $(event.target);
+	if ($target.hasClass('covered')){
+		$target.removeClass('covered');
+		$target.addClass('square');
+	
+		}
+	};
+
+
 makeBoard();
 
 
@@ -69,12 +80,7 @@ $allSquares = $('.square');
 
 //before I can do this, i need to give each square a value. 
 
-var flipCard = function(event){
-	var target = event.target;
-	if (target.hasClass('covered')){
-		target.removeClass('covered');
-		target.addClass('square');
-		}
+
 
 //event listener not working right
 
@@ -82,7 +88,7 @@ var flipCard = function(event){
 	//once uncovered, need
 		
 
-	};
+	
 	
 
 

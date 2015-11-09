@@ -6,13 +6,6 @@ body{
 	height: 800px;
 }
 
-.covered{
-	background-color: black;
-	height: 120px;
-	width: 24%;
-	float: left;
-	border: 1px solid white;
-}
 
 .square{
 	height: 120px;
@@ -24,4 +17,10 @@ body{
 	text-align: center;
 }
 
-
+.covered{
+	background-color: black;
+	height: 120px;
+	width: 24%;
+	float: left;
+	border: 1px solid white;
+}
