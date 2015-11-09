@@ -1,4 +1,4 @@
-Must be included in readme:
+http://bennettzjames.github.io/concentration/
 
 -links to libraries used
 
