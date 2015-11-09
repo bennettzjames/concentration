@@ -15,8 +15,7 @@ $wholeBoard = $('.game-board');
 
 outputArray = [];
 var counter = 0;
-flippedArray = [
-'1', '1', '2', '2', '3', '3', '4', '4'];
+flippedArray = ['1', '1', '2', '2', '3', '3', '4', '4'];
 
 
 //below is the Fisher-Yates shuffle. aka the knuth shuffle. I found it on stackoverflow and followed the link to the github page. I couldn't get the underscore shuffle to work right. 
@@ -47,14 +46,15 @@ makeBoard = function(event){
 	counter = 0;
 	for (var i = 0; i < flippedArray.length; i++){
 		 console.log(i);
-		 $('<div class="square '+flippedArray[i]+'"">').text(flippedArray[i]).on('click', flipCard).appendTo($wholeBoard);
-
+		 newDiv = $('<div class="covered" square '+flippedArray[i]+'">').text(flippedArray[i]).on('click', flipCard).appendTo($wholeBoard);
 
 	}
 
 
    };
 makeBoard();
+
+
 
 
 $allSquares = $('.square');
@@ -71,21 +71,22 @@ $allSquares = $('.square');
 
 var flipCard = function(event){
 	var target = event.target;
-	if (target.text.contains('1')){
-		console.log("this works")
-	}
+	if (target.hasClass('covered')){
+		target.removeClass('covered');
+		target.addClass('square');
+		}
 
+//event listener not working right
 
-
-	//nothing is visibile){
-		//make visibility visible
-		//else remain invisible
+	//if its covered, then uncover
+	//once uncovered, need
+		
 
 	};
 	
 
 
-});
+})
 
 
 
