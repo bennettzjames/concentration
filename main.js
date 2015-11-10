@@ -30,6 +30,8 @@ var makeBoard = function(event){
   }
 };
 
+//sung helped with the checkForMatch function
+
 var clicks = 0;
 
 var firstSquareNumberClassName;

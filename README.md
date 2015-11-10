@@ -11,6 +11,8 @@ https://code.jquery.com/jquery-2.1.4.js
 
 -sources of any code used
 
+-Sung Choi
+
 http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array (to shuffle array)
 
 -user stories
