@@ -1,24 +1,17 @@
-http://bennettzjames.github.io/concentration/
+	http://bennettzjames.github.io/concentration/
+
+
+Description:
+This is a memory game. You have two tries to match the numbers under the cards. In this memory game you must complete the whole board with no errors. If you make any mistakes, the board clears. Good luck!
+
 
 -links to libraries used
 
-Underscore.js 1.8.3
-http://underscorejs.org
-(c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
-Underscore may be freely distributed under the MIT license.
-
-
-
-
-
+https://code.jquery.com/jquery-2.1.4.js
 
 -sources of any code used
 
-
-might use this--http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array (to shuffle array)
-
-but this seems simpler--http://www.w3schools.com/jsref/jsref_random.asp
-
+http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array (to shuffle array)
 
 -user stories
 	-USER SHOULD BE ABLE TO:
@@ -41,7 +34,5 @@ but this seems simpler--http://www.w3schools.com/jsref/jsref_random.asp
 	-***image file in the repo******
 
 -List of technologies used
+HTML, Javascript, CSS, JQuery
 
--Description of app
-
-- link to app on github pages
